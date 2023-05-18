@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)https://quera.org/course/assignments/39882/print -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>مفاهیم طراحی کلاس‌ها (بخش آخر درس)</title>
+    
+    <meta name="fontiran.com:license" content="56AXFY">
+    <link rel="shortcut icon" type="image/png" href="https://quera.org/static/images/logo/favicon/favicon-16x16.2-4bcbe4f363d7.png">
+    <meta name="theme-color" content="#09c">
+    
+
+
+  <script async="" src="./OOP_class_design_files/clarity.js"></script><script type="text/javascript" async="" src="./OOP_class_design_files/analytics.js"></script><script async="" src="./OOP_class_design_files/at7xzpaerh"></script><script id="ua-script-yn-3147-adv" data-analyticsobject="yektanet" async="" type="text/javascript" src="./OOP_class_design_files/rg.complete.js"></script><script type="text/javascript" async="" src="./OOP_class_design_files/js"></script><script type="text/javascript" async="" src="./OOP_class_design_files/hotjar-3239305.js"></script><script gtm="GTM-TDRQP6V" type="text/javascript" async="" src="./OOP_class_design_files/optimize.js"></script><script type="text/javascript" integrity="sha384-xwN6OCSgIf1SF9jtD6pouaSwCvpobyV3lanBGQ1d33MwTxLarbQxUif0Slt0npCM" crossorigin="anonymous" async="" src="./OOP_class_design_files/amplitude-8.3.0-min.gz.js"></script><script async="" src="./OOP_class_design_files/gtm.js"></script><script>
+    /* beautify ignore:start */
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TDRQP6V');
+    /* beautify ignore:end */
+  </script>
+  
+  
+    <script>
+  const amplitudeApiKey = "ad324f3bb41b4d895c353238cfecb4e9" || null;
+  const amplitudeVisitorID = "NDI3OTI0Mjc5MjQyNzkyNJnnGD4sDL0ub0zIO0ydxss=" || null;
+  // console.log("***", {amplitudeApiKey, amplitudeVisitorID});
+  if (amplitudeApiKey && amplitudeVisitorID) {
+    /* beautify ignore:start */
+    (function(e,t){var n=e.amplitude||{_q:[],_iq:{}};
+      var r=t.createElement("script")
+      ;r.type="text/javascript"
+      ;r.integrity="sha384-xwN6OCSgIf1SF9jtD6pouaSwCvpobyV3lanBGQ1d33MwTxLarbQxUif0Slt0npCM"
+      ;r.crossOrigin="anonymous";r.async=true
+      ;r.src="https://cdn.amplitude.com/libs/amplitude-8.3.0-min.gz.js"
+      ;r.onload=function(){if(!e.amplitude.runQueuedFunctions){
+        console.log("[Amplitude] Error: could not load SDK")}}
+      ;var i=t.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)
+      ;function s(e,t){e.prototype[t]=function(){
+        this._q.push([t].concat(Array.prototype.slice.call(arguments,0)));return this}}
+      var o=function(){this._q=[];return this}
+      ;var a=["add","append","clearAll","prepend","set","setOnce","unset","preInsert","postInsert","remove"]
+      ;for(var c=0;c<a.length;c++){s(o,a[c])}n.Identify=o;var u=function(){this._q=[]
+        ;return this}
+      ;var l=["setProductId","setQuantity","setPrice","setRevenueType","setEventProperties"]
+      ;for(var p=0;p<l.length;p++){s(u,l[p])}n.Revenue=u
+      ;var d=["init","logEvent","logRevenue","setUserId","setUserProperties","setOptOut","setVersionName","setDomain","setDeviceId","enableTracking","setGlobalUserProperties","identify","clearUserProperties","setGroup","logRevenueV2","regenerateDeviceId","groupIdentify","onInit","logEventWithTimestamp","logEventWithGroups","setSessionId","resetSessionId"]
+      ;function v(e){function t(t){e[t]=function(){
+        e._q.push([t].concat(Array.prototype.slice.call(arguments,0)))}}
+        for(var n=0;n<d.length;n++){t(d[n])}}v(n);n.getInstance=function(e){
+          e=(!e||e.length===0?"$default_instance":e).toLowerCase()
+          ;if(!Object.prototype.hasOwnProperty.call(n._iq,e)){n._iq[e]={_q:[]};v(n._iq[e])
+          }return n._iq[e]};e.amplitude=n})(window,document);
+    /* beautify ignore:end */
+
+    amplitude.getInstance().init(amplitudeApiKey, amplitudeVisitorID);
+
+    // === log event example ===
+    // var event = "Button Clicked";
+    // var eventProperties = {
+    //     "hover time": "100ms"
+    // };
+    // amplitude.getInstance().logEvent(event, eventProperties);
+  }
+</script>
+
+  
+  
+
+
+    <script type="text/javascript" src="./OOP_class_design_files/common.min.2-ff5d1031dabd.js"></script><meta http-equiv="origin-trial" content="A727AcAeLCei/ZogJHBlJUS63SxP6AeIROo7qXrkjrxkoxBu0eSSmypAHmGYwk4HjBMQp5nxCFODzfVnUIe31AQAAAB7eyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjg4MDgzMTk5LCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A727AcAeLCei/ZogJHBlJUS63SxP6AeIROo7qXrkjrxkoxBu0eSSmypAHmGYwk4HjBMQp5nxCFODzfVnUIe31AQAAAB7eyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjg4MDgzMTk5LCJpc1RoaXJkUGFydHkiOnRydWV9"><script attributionsrc="" type="text/javascript" async="" src="./OOP_class_design_files/f.txt"></script>
+    <link rel="stylesheet" type="text/css" href="./OOP_class_design_files/semantic.rtl.min.2-87f68286e0ba.css">
+    <link rel="stylesheet" type="text/css" href="./OOP_class_design_files/style.2-b80b5257106c.css">
+    <link rel="stylesheet" type="text/css" href="./OOP_class_design_files/style.2-b3ef4156e542.css">
+    <script type="text/javascript" src="./OOP_class_design_files/main.2-d263ad2294d7.js"></script>
+    <script src="./OOP_class_design_files/prism.min.2-d002bc8c9f64.js" data-manual=""></script>
+    <script type="text/javascript" src="./OOP_class_design_files/notebook.2-0c223d43deb5.js"></script>
+    <script type="text/javascript" src="./OOP_class_design_files/markdown-moratab.2-dbca098e5b03.js"></script>
+    <link rel="stylesheet" type="text/css" href="./OOP_class_design_files/prism.2-c967968a069e.css">
+    <link rel="stylesheet" href="./OOP_class_design_files/katex.min.2-852d91d247c4.css">
+    <style>
+      @page {
+        margin: 25mm 20mm;
+      }
+
+      @media print {
+
+        pre,
+        code {
+          white-space: pre-wrap;
+          /* Since CSS 2.1 */
+          white-space: -moz-pre-wrap;
+          /* Mozilla, since 1999 */
+          white-space: -o-pre-wrap;
+          /* Opera 7 */
+          word-wrap: break-word;
+          /* Internet Explorer 5.5+ */
+        }
+      }
+
+      pre {
+        background-color: #dce8ec !important
+      }
+    </style>
+  <script async="" src="./OOP_class_design_files/modules.9ac4218629ac8ca6cf73.js" charset="utf-8"></script></head>
+
+  <body dir="rtl" data-new-gr-c-s-check-loaded="14.1110.0" data-gr-ext-installed="">
+    
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TDRQP6V" height="0" width="0"
+    style="display:none;visibility:hidden"></iframe></noscript>
+
+
+    
+      <div class="qu-problem-segment" style="page-break-after: always">
+        
+
+<div style="display: none;" id="description_md-134266">این هفته هپولی توی کلاس AP با کلاس انتزاعی و توابع مجازی آشنا شده ولی دقیق نمی دونه که چقد استفاده از اینا می تونه کمکش کنه.
+
+بعد از کلاس میره مغازه سی دی فروشی ای که عموش تازه باز کرده. عموش ازش می خواد اطلاعات سی دی های مغازشو مرتب یه جا داشته باشه و به راحتی بتونه بهشون دسترسی داشته باشه.
+
+حالا هپولی مونده و کلی سی دی مرتب نشده!! 
+![توضیح تصویر](https://cdn.discordapp.com/attachments/743573562807550003/841993131066785802/Screenshot_from_2021-05-12_15-29-35.png)
+
+محتوای سی دی ها میتونن فیلم سینمایی (Movie) و یا سریال(Series)  باشن و فیلم ها قابلیت اجاره گرفتن دارن.
+پس یه کلاس CD داریم که عضو های داده ای نام اثر (_name_)، کارگردان اثر (_director_) و مدت زمان به دقیقه (_duration_) داره. دو کلاس Movie و Series از کلاس CD ارث میبرن.
+
+در کلاس Movie عضوهای داده ای release_year و language و rented رو داریم. همچنین چهار تابع عضو زیر هم وجود دارن:
+
++ تابع _setdata_ : وظیفه ی گرفتن تمام اطلاعات فیلم سینمایی شامل نام اثر، کارگردان، مدت زمان، سال انتشار، زبان فیلم و قابلیت اجاره گرفتن رو داره.
++ تابع _showdata_ : وظیفه ی نمایش تمام اطلاعات فیلم سینمایی رو داره.
++ تابع  _rentMovie_ : با صدا زدن این تابع نشان می دهیم فیلم اجاره داده شده.
++ تابع _returnMovie_ : با صدا زدن این تابع نشان می دهیم فیلم به مغازه بازگردانده شده.
+
+در کلاس Series دو عضو داده ای season و episode رو داریم. همچنین دو تابع عضو زیر هم وجود دارن:
+
++ تابع _setdata_ : وظیفه ی گرفتن تمام اطلاعات سریال شامل نام اثر، کارگردان، مدت زمان، فصل و قسمت رو داره.
++ تابع _showdata_ : وظیفه ی نمایش تمام اطلاعات سریال رو داره.
+
+حالا به هپولی کمک کنید که این کلاس ها رو بهینه پیاده سازی کنه جوری که از **کلاس انتزاعی**، **توابع مجازی** ،**[فکتوری متد](https://www.geeksforgeeks.org/design-patterns-set-2-factory-method/)** و **[داینامیک کست](https://en.cppreference.com/w/cpp/language/dynamic_cast)** استفاده بشه. همچنین شما می توانین عضو های داده ای بیشتری در کلاس ها بنابر نیاز ایجاد کنین.
+
+# ورودی :
+
+خط اول ورودی تعداد شی هایی است که می سازیم سپس درصورتی که کاربر در خط بعدی عدد 1 را وارد کرد به معنای ساخت شئی فیلم سینمایی، درصورتی که 2 را وارد کرد به معنای ساخت شئی سریال است.
+
+بعد از وارد کردن نوع شئی در خط بعدی موارد مورد نیاز هر شئی از کاربر گرفته می شود . برای مثال برای فیلم سینمایی به ترتیب نام اثر، کارگردان، مدت زمان، سال انتشار و زبان فیلم گرفته میشه و یا در صورتی که سریال بود به ترتیب نام اثر، کارگردان، مدت زمان، فصل و قسمت گرفته میشه.
+
+سپس در q خط بعدی به ترتیب شماره سی دی و اجاره گرفتن (1) و یا پس دادن را (0) آن را ورودی می گیریم.
+# خروجی :
+
+ابتدا به ترتیب اطلاعات تمامی CD ها را بستگی به نوع شئی ها خروجی می دهیم.(اطلاعات با یک اسپیس فاصله)
+سپس به تعداد query ها به شکل زیر خروجی می دهید:
++ فیلم قبلا اجاره گرفته شده بود و در دسترس نیست عبارت "Not Returned Yet" 
++ با موفقیت اجاره داده شد عبارت "Rented Successfully" 
++ با موفقیت پس داده شد "Returned Successfully" 
++ در غیر این صورت "ERROR"
+
+# مثال :
+
+## ورودی :
+
+```
+4
+1
+Interstellar Christopher_Nolan 169 2014 Eng 0
+2
+Friends David_Crane/Marta_Kauffman 25 4 7
+2
+Skam Julie_Andem 26 2 1
+1
+The_Book_Thief Brian_Percival 130 2013 Eng/Ger 0
+5
+1 0
+4 1
+4 1
+4 0
+2 1
+```
+## خروجی :
+
+```
+Interstellar Christopher_Nolan 169 2014 Eng 0
+Friends David_Crane/Marta_Kauffman 25 4 7
+Skam Julie_Andem 26 2 1
+The_Book_Thief Brian_Percival 130 2013 Eng/Ger 0
+ERROR
+Rented Successfully
+Not Returned Yet
+Returned Successfully
+ERROR
+```
+# کد main :
+
+```c
+int main(){
+
+    int n, val, q;
+    cin&gt;&gt;n; //The number of objects that is going to be created.
+    CD** cd_object = new CD* [n];
+
+    for(int i = 0;i &lt; n;i++){
+        cin&gt;&gt;val;
+        cd_object[i] = CreateObject(val);  //Call Factory Method here
+        cd_object[i]-&gt;getdata(); // Get the data from the user.
+    }
+
+    for(int i=0;i&lt;n;i++)
+        cd_object[i]-&gt;putdata(); // Print the required output for each object.
+
+    cin&gt;&gt;q;
+    //your code
+
+    return 0;
+}
+```</div>
+<div>
+    <div class="ui center aligned fluid container">
+        <h1>مغازه سی دی فروشی (Factory method)</h1>
+    </div>
+    <br>
+    <div class="description-html" id="description_html-134266"><p dir="auto">این هفته هپولی توی کلاس AP با کلاس انتزاعی و توابع مجازی آشنا شده ولی دقیق نمی دونه که چقد استفاده از اینا می تونه کمکش کنه.</p>
+<p dir="auto">بعد از کلاس میره مغازه سی دی فروشی ای که عموش تازه باز کرده. عموش ازش می خواد اطلاعات سی دی های مغازشو مرتب یه جا داشته باشه و به راحتی بتونه بهشون دسترسی داشته باشه.</p>
+<p dir="auto">حالا هپولی مونده و کلی سی دی مرتب نشده!! 
+<img src="./OOP_class_design_files/Screenshot_from_2021-05-12_15-29-35.png" alt="توضیح تصویر" style="cursor: pointer;"></p>
+<p dir="auto">محتوای سی دی ها میتونن فیلم سینمایی (Movie) و یا سریال(Series)  باشن و فیلم ها قابلیت اجاره گرفتن دارن.
+پس یه کلاس CD داریم که عضو های داده ای نام اثر (<em>name</em>)، کارگردان اثر (<em>director</em>) و مدت زمان به دقیقه (<em>duration</em>) داره. دو کلاس Movie و Series از کلاس CD ارث میبرن.</p>
+<p dir="auto">در کلاس Movie عضوهای داده ای release_year و language و rented رو داریم. همچنین چهار تابع عضو زیر هم وجود دارن:</p>
+<ul dir="auto">
+<li>تابع <em>setdata</em> : وظیفه ی گرفتن تمام اطلاعات فیلم سینمایی شامل نام اثر، کارگردان، مدت زمان، سال انتشار، زبان فیلم و قابلیت اجاره گرفتن رو داره.</li>
+<li>تابع <em>showdata</em> : وظیفه ی نمایش تمام اطلاعات فیلم سینمایی رو داره.</li>
+<li>تابع  <em>rentMovie</em> : با صدا زدن این تابع نشان می دهیم فیلم اجاره داده شده.</li>
+<li>تابع <em>returnMovie</em> : با صدا زدن این تابع نشان می دهیم فیلم به مغازه بازگردانده شده.</li>
+</ul>
+<p dir="auto">در کلاس Series دو عضو داده ای season و episode رو داریم. همچنین دو تابع عضو زیر هم وجود دارن:</p>
+<ul dir="auto">
+<li>تابع <em>setdata</em> : وظیفه ی گرفتن تمام اطلاعات سریال شامل نام اثر، کارگردان، مدت زمان، فصل و قسمت رو داره.</li>
+<li>تابع <em>showdata</em> : وظیفه ی نمایش تمام اطلاعات سریال رو داره.</li>
+</ul>
+<p dir="auto">حالا به هپولی کمک کنید که این کلاس ها رو بهینه پیاده سازی کنه جوری که از <strong>کلاس انتزاعی</strong>، <strong>توابع مجازی</strong> ،<strong><a href="https://www.geeksforgeeks.org/design-patterns-set-2-factory-method/" target="_blank">فکتوری متد</a></strong> و <strong><a href="https://en.cppreference.com/w/cpp/language/dynamic_cast" target="_blank">داینامیک کست</a></strong> استفاده بشه. همچنین شما می توانین عضو های داده ای بیشتری در کلاس ها بنابر نیاز ایجاد کنین.</p>
+<h1 dir="auto" id="ورودی-:">ورودی :<a class="anchorLink" href="https://quera.org/course/assignments/39882/print#%D9%88%D8%B1%D9%88%D8%AF%DB%8C-:">🔗</a></h1>
+<p dir="auto">خط اول ورودی تعداد شی هایی است که می سازیم سپس درصورتی که کاربر در خط بعدی عدد 1 را وارد کرد به معنای ساخت شئی فیلم سینمایی، درصورتی که 2 را وارد کرد به معنای ساخت شئی سریال است.</p>
+<p dir="auto">بعد از وارد کردن نوع شئی در خط بعدی موارد مورد نیاز هر شئی از کاربر گرفته می شود . برای مثال برای فیلم سینمایی به ترتیب نام اثر، کارگردان، مدت زمان، سال انتشار و زبان فیلم گرفته میشه و یا در صورتی که سریال بود به ترتیب نام اثر، کارگردان، مدت زمان، فصل و قسمت گرفته میشه.</p>
+<p dir="auto">سپس در q خط بعدی به ترتیب شماره سی دی و اجاره گرفتن (1) و یا پس دادن را (0) آن را ورودی می گیریم.</p>
+<h1 dir="auto" id="خروجی-:">خروجی :<a class="anchorLink" href="https://quera.org/course/assignments/39882/print#%D8%AE%D8%B1%D9%88%D8%AC%DB%8C-:">🔗</a></h1>
+<p dir="auto">ابتدا به ترتیب اطلاعات تمامی CD ها را بستگی به نوع شئی ها خروجی می دهیم.(اطلاعات با یک اسپیس فاصله)
+سپس به تعداد query ها به شکل زیر خروجی می دهید:</p>
+<ul dir="auto">
+<li>فیلم قبلا اجاره گرفته شده بود و در دسترس نیست عبارت "Not Returned Yet" </li>
+<li>با موفقیت اجاره داده شد عبارت "Rented Successfully" </li>
+<li>با موفقیت پس داده شد "Returned Successfully" </li>
+<li>در غیر این صورت "ERROR"</li>
+</ul>
+<h1 dir="auto" id="مثال-:">مثال :<a class="anchorLink" href="https://quera.org/course/assignments/39882/print#%D9%85%D8%AB%D8%A7%D9%84-:">🔗</a></h1>
+<h2 dir="auto" id="ورودی-:">ورودی :<a class="anchorLink" href="https://quera.org/course/assignments/39882/print#%D9%88%D8%B1%D9%88%D8%AF%DB%8C-:">🔗</a></h2>
+<div class="code-toolbar"><pre class="code-block language-none" dir="ltr" tabindex="0"><code data-filename="undefined" class="language-none">4
+1
+Interstellar Christopher_Nolan 169 2014 Eng 0
+2
+Friends David_Crane/Marta_Kauffman 25 4 7
+2
+Skam Julie_Andem 26 2 1
+1
+The_Book_Thief Brian_Percival 130 2013 Eng/Ger 0
+5
+1 0
+4 1
+4 1
+4 0
+2 1</code></pre><div class="toolbar"><div class="toolbar-item"><span>Plain text</span></div><div class="toolbar-item"><button class="copy-to-clipboard-button" type="button" data-copy-state="copy"><span>Copy</span></button></div></div></div><h2 dir="auto" id="خروجی-:">خروجی :<a class="anchorLink" href="https://quera.org/course/assignments/39882/print#%D8%AE%D8%B1%D9%88%D8%AC%DB%8C-:">🔗</a></h2>
+<div class="code-toolbar"><pre class="code-block language-none" dir="ltr" tabindex="0"><code data-filename="undefined" class="language-none">Interstellar Christopher_Nolan 169 2014 Eng 0
+Friends David_Crane/Marta_Kauffman 25 4 7
+Skam Julie_Andem 26 2 1
+The_Book_Thief Brian_Percival 130 2013 Eng/Ger 0
+ERROR
+Rented Successfully
+Not Returned Yet
+Returned Successfully
+ERROR</code></pre><div class="toolbar"><div class="toolbar-item"><span>Plain text</span></div><div class="toolbar-item"><button class="copy-to-clipboard-button" type="button" data-copy-state="copy"><span>Copy</span></button></div></div></div><h1 dir="auto" id="کد-main-:">کد main :<a class="anchorLink" href="https://quera.org/course/assignments/39882/print#%DA%A9%D8%AF-main-:">🔗</a></h1>
+<div class="code-toolbar"><pre class="code-block line-numbers language-c" dir="ltr" tabindex="0"><code data-filename="undefined" class="language-c"><span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+    <span class="token keyword">int</span> n<span class="token punctuation">,</span> val<span class="token punctuation">,</span> q<span class="token punctuation">;</span>
+    cin<span class="token operator">&gt;&gt;</span>n<span class="token punctuation">;</span> <span class="token comment">//The number of objects that is going to be created.</span>
+    CD<span class="token operator">*</span><span class="token operator">*</span> cd_object <span class="token operator">=</span> new CD<span class="token operator">*</span> <span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        cin<span class="token operator">&gt;&gt;</span>val<span class="token punctuation">;</span>
+        cd_object<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">CreateObject</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">//Call Factory Method here</span>
+        cd_object<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">-&gt;</span><span class="token function">getdata</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Get the data from the user.</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>n<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>
+        cd_object<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">-&gt;</span><span class="token function">putdata</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Print the required output for each object.</span>
+
+    cin<span class="token operator">&gt;&gt;</span>q<span class="token punctuation">;</span>
+    <span class="token comment">//your code</span>
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><div class="toolbar"><div class="toolbar-item"><span>C</span></div><div class="toolbar-item"><button class="copy-to-clipboard-button" type="button" data-copy-state="copy"><span>Copy</span></button></div></div></div><div class="ui basic modal" id="img-modal">
+            <div class="image content" style="justify-content: center; align-items: center">
+                <img class="image" style="max-width: 100%" src="https://quera.org/course/assignments/39882/print">
+            </div>
+        </div></div>
+</div>
+
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+        render_problem_text('description_md-134266', 'description_html-134266');
+    });
+</script>
+      </div>
+    
+      <div class="qu-problem-segment" style="page-break-after: always">
+        
+
+<div style="display: none;" id="description_md-134267">پیش‌نیاز مسئله: خانواده شیپولی (مفاهیم پیشرفته شیئ گرایی)
+------
+&gt; یکی از دلایل خوشحالی همیشگی هپولی اینه که وقتی میره برای خودش **قهوه بریزه** بیاد لپتاپش میره رو حالت اسکرین سیور و کلی حباب قشنگ میاد که دارن میخورن بهم :))) (سیستم عاملش ویندوز سونه!).
+
+مورد بالا باعث شده که شیپولی به هپولی حسودی کنه و دلش بخواد که اونم همچین چیزی داشته باشه، حتی یه چیز بهتر!
+
+در این تمرین قراره شما به کمک خانواده شیپولی یک اسکرین سیور در صفحه ترمینال طراحی کنید که علاوه بر **دایره**، **مربع** و **مستطیل** هم داشته باشه که در صفحه با **سرعت های مختلف** حرکت می‌کنند و در صورت برخورد بهم مسیرشون عوض میشه.
+
+از [این لینک](https://www.dropbox.com/s/xtok7p110ettfah/sheipooli.mp4?dl=0) می‌توانید نحوه کار این اسکرین سیور را ببینین.
+
+در این برنامه در هر مرحله صفحه ترمینال پاک می‌شود و به کمک توابع پایین شکل های مختلف کشیده می‌شوند و در هر مرحله در یک جهت با سرعتی معین جابه جا می‌شوند.
+
+- **تنظیمات اولیه:**
+```c
+#include &lt;windows.h&gt;
+#include &lt;time.h&gt;
+#include &lt;math.h&gt;
+double pi = 2*acos(0.0);
+HWND myconsole = GetConsoleWindow();
+HDC hdc = GetDC(myconsole);
+COLORREF color;
+color = RGB(rand() % 256, rand() % 256, rand() % 256);
+```
+
+- **تابع کشیدن دایره:**
+```c
+for (double theta = 0; theta &lt; 2 * PI; theta += .001) {
+	SetPixel(hdc, x - radius * cos(theta), y - radius * sin(theta), color);
+}
+// Filled cirlce
+int r2 = radius * radius;
+for (int i = -radius; i &lt; radius; i++) {
+	for (int j = -radius; j &lt; radius; j++) {
+		if (i * i + j * j &lt; r2)
+			SetPixel(hdc, x - i, y - j, color);
+	}
+}
+Sleep(1000);
+```
+
+- **تابع کشیدن مستطیل:**
+```c
+for (int i = -width / 2; i &lt; width / 2; i++)
+{
+	SetPixel(hdc, x + i, y - height / 2, color);
+	SetPixel(hdc, x + i, y + height / 2, color);
+}
+for (int j = -height / 2; j &lt; height / 2; j++)
+{
+	SetPixel(hdc, x - width / 2, y + j, color);
+	SetPixel(hdc, x + width / 2, y + j, color);
+}
+// Filled rectangle
+for (int i = -width / 2; i &lt; width / 2; i++)
+{
+	for (int j = -height / 2; j &lt; height / 2; j++)
+	{
+		SetPixel(hdc, x + i, y + j, color);
+	}
+}
+```
+
+# **راهنمایی ها:**
+1. با تغییر جزئی کد خانواده شیپولی و اضافه کردن مواردی مثل یک تابع  ‍`move` و ... استفاده کنید.
+2. اشیاء را می‌توانید بصورت رندوم در کلاس مربوط به خودشان تولید کنید و بر حسب ابعاد صفحه نمایش و تعداد شیئ های در صفحه بسازید.
+3. برای سرعت هر شکل می‌توانید یک بردار که جهت `x` و ‍`y` را دارد در نظر بگیرید.
+4. برای تلاقی دایره با مستطیل، میتوانید دایره محیطی مستطیل را درنظر بگیرید.
+
+# **موارد امتیازی:** (تا ۵۰ نمره)
+- تلاقی دو مستطیل باهم بدون فرض دایره بودن و بر حسب اضلاع هر کدام
+- تعریف طول عمر برای هر یک از اشیاء
+- هر ایده موردی که مسئله یا طراحی شیئ گرایی شما را بهبود بخشد!
+
+# **نکات مهم:**
+1.  تمامیه متغییر ها باید از نوع مناسب باشند.
+2.  کلاس های شما باید به بهترین نوع ممکن ارث برده باشند. (مانند سوال خانواده شیپولی)
+3. به تفاوت تلاقی اشکال با یکدیگر توجه کنید، برای مثال فاصله دو دایره حداقل جمع دو شعاع آنهاست.
+4. **طراحی کلاس های شما مهم ترین قسمت این مسئله است**، پس به تمامی مباحث درس در طراحی توجه کنید.
+5. برای مواردی که به طور شفاف در صورت سؤال بیان نشده اند (مثلا برخورد دایره با مستطیل) با یک فرض پیش روید.
+6. هنگام تلاقی دو شیئ میتوانید صرفا جهت مسیر هر شکل را برعکس کنید. (۱۸۰ درجه چرخش)
+7. به فایل بندی کلاس هایتان دقت کنید.</div>
+<div>
+    <div class="ui center aligned fluid container">
+        <h1>شیپولی حسود (OOP)</h1>
+    </div>
+    <br>
+    <div class="description-html" id="description_html-134267"><h2 dir="auto" id="پیش‌نیاز-مسئله:-خانواده-شیپولی-(مفاهیم-پیشرفته-شیئ-گرایی)">پیش‌نیاز مسئله: خانواده شیپولی (مفاهیم پیشرفته شیئ گرایی)<a class="anchorLink" href="https://quera.org/course/assignments/39882/print#%D9%BE%DB%8C%D8%B4%E2%80%8C%D9%86%DB%8C%D8%A7%D8%B2-%D9%85%D8%B3%D8%A6%D9%84%D9%87:-%D8%AE%D8%A7%D9%86%D9%88%D8%A7%D8%AF%D9%87-%D8%B4%DB%8C%D9%BE%D9%88%D9%84%DB%8C-(%D9%85%D9%81%D8%A7%D9%87%DB%8C%D9%85-%D9%BE%DB%8C%D8%B4%D8%B1%D9%81%D8%AA%D9%87-%D8%B4%DB%8C%D8%A6-%DA%AF%D8%B1%D8%A7%DB%8C%DB%8C)">🔗</a></h2>
+<blockquote dir="auto">
+<p>یکی از دلایل خوشحالی همیشگی هپولی اینه که وقتی میره برای خودش <strong>قهوه بریزه</strong> بیاد لپتاپش میره رو حالت اسکرین سیور و کلی حباب قشنگ میاد که دارن میخورن بهم :))) (سیستم عاملش ویندوز سونه!).</p>
+</blockquote>
+<p dir="auto">مورد بالا باعث شده که شیپولی به هپولی حسودی کنه و دلش بخواد که اونم همچین چیزی داشته باشه، حتی یه چیز بهتر!</p>
+<p dir="auto">در این تمرین قراره شما به کمک خانواده شیپولی یک اسکرین سیور در صفحه ترمینال طراحی کنید که علاوه بر <strong>دایره</strong>، <strong>مربع</strong> و <strong>مستطیل</strong> هم داشته باشه که در صفحه با <strong>سرعت های مختلف</strong> حرکت می‌کنند و در صورت برخورد بهم مسیرشون عوض میشه.</p>
+<p dir="auto">از <a href="https://www.dropbox.com/s/xtok7p110ettfah/sheipooli.mp4?dl=0" target="_blank">این لینک</a> می‌توانید نحوه کار این اسکرین سیور را ببینین.</p>
+<p dir="auto">در این برنامه در هر مرحله صفحه ترمینال پاک می‌شود و به کمک توابع پایین شکل های مختلف کشیده می‌شوند و در هر مرحله در یک جهت با سرعتی معین جابه جا می‌شوند.</p>
+<ul dir="auto">
+<li><p><strong>تنظیمات اولیه:</strong></p>
+<div class="code-toolbar"><pre class="code-block line-numbers language-c" dir="ltr" tabindex="0"><code data-filename="undefined" class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;windows.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;time.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;math.h&gt;</span></span>
+<span class="token keyword">double</span> pi <span class="token operator">=</span> <span class="token number">2</span><span class="token operator">*</span><span class="token function">acos</span><span class="token punctuation">(</span><span class="token number">0.0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+HWND myconsole <span class="token operator">=</span> <span class="token function">GetConsoleWindow</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+HDC hdc <span class="token operator">=</span> <span class="token function">GetDC</span><span class="token punctuation">(</span>myconsole<span class="token punctuation">)</span><span class="token punctuation">;</span>
+COLORREF color<span class="token punctuation">;</span>
+color <span class="token operator">=</span> <span class="token function">RGB</span><span class="token punctuation">(</span><span class="token function">rand</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">%</span> <span class="token number">256</span><span class="token punctuation">,</span> <span class="token function">rand</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">%</span> <span class="token number">256</span><span class="token punctuation">,</span> <span class="token function">rand</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">%</span> <span class="token number">256</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><div class="toolbar"><div class="toolbar-item"><span>C</span></div><div class="toolbar-item"><button class="copy-to-clipboard-button" type="button" data-copy-state="copy"><span>Copy</span></button></div></div></div></li>
+<li><p><strong>تابع کشیدن دایره:</strong></p>
+<div class="code-toolbar"><pre class="code-block line-numbers language-c" dir="ltr" tabindex="0"><code data-filename="undefined" class="language-c"><span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">double</span> theta <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> theta <span class="token operator">&lt;</span> <span class="token number">2</span> <span class="token operator">*</span> PI<span class="token punctuation">;</span> theta <span class="token operator">+=</span> <span class="token number">.001</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">SetPixel</span><span class="token punctuation">(</span>hdc<span class="token punctuation">,</span> x <span class="token operator">-</span> radius <span class="token operator">*</span> <span class="token function">cos</span><span class="token punctuation">(</span>theta<span class="token punctuation">)</span><span class="token punctuation">,</span> y <span class="token operator">-</span> radius <span class="token operator">*</span> <span class="token function">sin</span><span class="token punctuation">(</span>theta<span class="token punctuation">)</span><span class="token punctuation">,</span> color<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// Filled cirlce</span>
+<span class="token keyword">int</span> r2 <span class="token operator">=</span> radius <span class="token operator">*</span> radius<span class="token punctuation">;</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token operator">-</span>radius<span class="token punctuation">;</span> i <span class="token operator">&lt;</span> radius<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token operator">-</span>radius<span class="token punctuation">;</span> j <span class="token operator">&lt;</span> radius<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">*</span> i <span class="token operator">+</span> j <span class="token operator">*</span> j <span class="token operator">&lt;</span> r2<span class="token punctuation">)</span>
+          <span class="token function">SetPixel</span><span class="token punctuation">(</span>hdc<span class="token punctuation">,</span> x <span class="token operator">-</span> i<span class="token punctuation">,</span> y <span class="token operator">-</span> j<span class="token punctuation">,</span> color<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token function">Sleep</span><span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><div class="toolbar"><div class="toolbar-item"><span>C</span></div><div class="toolbar-item"><button class="copy-to-clipboard-button" type="button" data-copy-state="copy"><span>Copy</span></button></div></div></div></li>
+<li><p><strong>تابع کشیدن مستطیل:</strong></p>
+<div class="code-toolbar"><pre class="code-block line-numbers language-c" dir="ltr" tabindex="0"><code data-filename="undefined" class="language-c"><span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token operator">-</span>width <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> width <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+  <span class="token function">SetPixel</span><span class="token punctuation">(</span>hdc<span class="token punctuation">,</span> x <span class="token operator">+</span> i<span class="token punctuation">,</span> y <span class="token operator">-</span> height <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">,</span> color<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">SetPixel</span><span class="token punctuation">(</span>hdc<span class="token punctuation">,</span> x <span class="token operator">+</span> i<span class="token punctuation">,</span> y <span class="token operator">+</span> height <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">,</span> color<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token operator">-</span>height <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> height <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+  <span class="token function">SetPixel</span><span class="token punctuation">(</span>hdc<span class="token punctuation">,</span> x <span class="token operator">-</span> width <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">,</span> y <span class="token operator">+</span> j<span class="token punctuation">,</span> color<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">SetPixel</span><span class="token punctuation">(</span>hdc<span class="token punctuation">,</span> x <span class="token operator">+</span> width <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">,</span> y <span class="token operator">+</span> j<span class="token punctuation">,</span> color<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// Filled rectangle</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token operator">-</span>width <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> width <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token operator">-</span>height <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> height <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span>
+  <span class="token punctuation">{</span>
+      <span class="token function">SetPixel</span><span class="token punctuation">(</span>hdc<span class="token punctuation">,</span> x <span class="token operator">+</span> i<span class="token punctuation">,</span> y <span class="token operator">+</span> j<span class="token punctuation">,</span> color<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><div class="toolbar"><div class="toolbar-item"><span>C</span></div><div class="toolbar-item"><button class="copy-to-clipboard-button" type="button" data-copy-state="copy"><span>Copy</span></button></div></div></div></li>
+</ul>
+<h1 dir="auto" id="راهنمایی-ها:"><strong>راهنمایی ها:</strong><a class="anchorLink" href="https://quera.org/course/assignments/39882/print#%D8%B1%D8%A7%D9%87%D9%86%D9%85%D8%A7%DB%8C%DB%8C-%D9%87%D8%A7:">🔗</a></h1>
+<ol dir="auto">
+<li>با تغییر جزئی کد خانواده شیپولی و اضافه کردن مواردی مثل یک تابع  ‍<code dir="ltr">move</code> و ... استفاده کنید.</li>
+<li>اشیاء را می‌توانید بصورت رندوم در کلاس مربوط به خودشان تولید کنید و بر حسب ابعاد صفحه نمایش و تعداد شیئ های در صفحه بسازید.</li>
+<li>برای سرعت هر شکل می‌توانید یک بردار که جهت <code dir="ltr">x</code> و ‍<code dir="ltr">y</code> را دارد در نظر بگیرید.</li>
+<li>برای تلاقی دایره با مستطیل، میتوانید دایره محیطی مستطیل را درنظر بگیرید.</li>
+</ol>
+<h1 dir="auto" id="موارد-امتیازی:-(تا-۵۰-نمره)"><strong>موارد امتیازی:</strong> (تا ۵۰ نمره)<a class="anchorLink" href="https://quera.org/course/assignments/39882/print#%D9%85%D9%88%D8%A7%D8%B1%D8%AF-%D8%A7%D9%85%D8%AA%DB%8C%D8%A7%D8%B2%DB%8C:-(%D8%AA%D8%A7-%DB%B5%DB%B0-%D9%86%D9%85%D8%B1%D9%87)">🔗</a></h1>
+<ul dir="auto">
+<li>تلاقی دو مستطیل باهم بدون فرض دایره بودن و بر حسب اضلاع هر کدام</li>
+<li>تعریف طول عمر برای هر یک از اشیاء</li>
+<li>هر ایده موردی که مسئله یا طراحی شیئ گرایی شما را بهبود بخشد!</li>
+</ul>
+<h1 dir="auto" id="نکات-مهم:"><strong>نکات مهم:</strong><a class="anchorLink" href="https://quera.org/course/assignments/39882/print#%D9%86%DA%A9%D8%A7%D8%AA-%D9%85%D9%87%D9%85:">🔗</a></h1>
+<ol dir="auto">
+<li>تمامیه متغییر ها باید از نوع مناسب باشند.</li>
+<li>کلاس های شما باید به بهترین نوع ممکن ارث برده باشند. (مانند سوال خانواده شیپولی)</li>
+<li>به تفاوت تلاقی اشکال با یکدیگر توجه کنید، برای مثال فاصله دو دایره حداقل جمع دو شعاع آنهاست.</li>
+<li><strong>طراحی کلاس های شما مهم ترین قسمت این مسئله است</strong>، پس به تمامی مباحث درس در طراحی توجه کنید.</li>
+<li>برای مواردی که به طور شفاف در صورت سؤال بیان نشده اند (مثلا برخورد دایره با مستطیل) با یک فرض پیش روید.</li>
+<li>هنگام تلاقی دو شیئ میتوانید صرفا جهت مسیر هر شکل را برعکس کنید. (۱۸۰ درجه چرخش)</li>
+<li>به فایل بندی کلاس هایتان دقت کنید.</li>
+</ol>
+<div class="ui basic modal" id="img-modal">
+            <div class="image content" style="justify-content: center; align-items: center">
+                <img class="image" style="max-width: 100%" src="https://quera.org/course/assignments/39882/print">
+            </div>
+        </div></div>
+</div>
+
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+        render_problem_text('description_md-134267', 'description_html-134267');
+    });
+</script>
+      </div>
+    
+      <div class="qu-problem-segment" style="page-break-after: always">
+        
+
+<div style="display: none;" id="description_md-134269">پیش‌نیاز مسئله:‌ کلاس Date-Time (مباحث پیشرفته شیئ گرایی)
+---
+
+&gt; همون طور که میدونیم سپهر یکمی دست و پا چلفتیه!!
+
+واسه همین ممکنه ورودی های غلط به برنامه ای که برای تاریخ و زمان نوشته بده! از طرفی دیگه از دیباگ کردن کداش و assert نوشتن خسته شده! حالا سپهر به کمک شما احتیاج داره که اگه ورودی هاشو غلط داد بتونه هندلشون کنه.
+
+حالا مشکلاتی که میتونن پیش بیان به شکل زیر هستن:
+
+## **کلاس**  `Time`
+
+- در صورت بروز خطا در متغیر **دقیقه یا ساعت**، یک شیئ از کلاس `TimeException` را `throw` کنید که شامل یک متغیر برای نمایش مقدار خطا و یک متن برای توضیح بیشتر خطاست.
+
+## **کلاس** `Date`
+
+- در صورت بروز خطا برای **روز**، مقدار `int` را `throw` کنید.
+- اگر برای مقدار **ماه** خطا پیش اومد، ‍`out_of_range` را 	`throw` کنید. (برای اطلاعات بیشتر درمورد این کلاس، به [این لینک](https://en.cppreference.com/w/cpp/error/out_of_range) مراجعه کنید.)
+- در صورت بروز خطا برای **سال** یک شیئ از کلاس ‍`DateException` را `throw` کنید که مشابه کلاس `TimeException` است.
+
+## **کلاس** `DateTime`
+
+ - خطاهای مربوط به متغیر **دقیقه** کلاس `Time` را رسیدگی کنید و نزدیک ترین عدد را کنید.
+ - خطای `int` مربوط به **روز** در کلاس `Date` را رسیدگی کنید و نزدیک ترین عدد را جایگزین کنید.
+ - خطا های مربوط به **ساعت و یا سال** را `catch` کنید و خطای `DateTimeException` را `throw` کنید. (چون خطای این دو مورد مهم هستند و امکان رسیدگی به آن در این کلاس نیست.)
+
+## **موارد مهم:**
+- در برنامه خود تا حد امکان از **تکرار کد خودداری کنید** و تا حد امکان خطا ها را در یک قسمت رسیدگی کنید.
+- کلاس های خطای شما باید از کلاس `Exception` ارث ببرند.(توضیحات این کلاس در ا[ین لینک](https://en.cppreference.com/w/cpp/error/exception) است.)
+- در `main` برنامه خطای مربوط به `DateTimeException` را `catch` کنید و در صفحه کنسول متن مربوط به خطا را چاپ کنید.
+- در `main` برنامه مثال هایی برای **چک کردن سناریو های بالا** بزنید.</div>
+<div>
+    <div class="ui center aligned fluid container">
+        <h1>سپهر خسته (Exception handling)</h1>
+    </div>
+    <br>
+    <div class="description-html" id="description_html-134269"><h2 dir="auto" id="پیش‌نیاز-مسئله:‌-کلاس-date-time-(مباحث-پیشرفته-شیئ-گرایی)">پیش‌نیاز مسئله:‌ کلاس Date-Time (مباحث پیشرفته شیئ گرایی)<a class="anchorLink" href="https://quera.org/course/assignments/39882/print#%D9%BE%DB%8C%D8%B4%E2%80%8C%D9%86%DB%8C%D8%A7%D8%B2-%D9%85%D8%B3%D8%A6%D9%84%D9%87:%E2%80%8C-%DA%A9%D9%84%D8%A7%D8%B3-date-time-(%D9%85%D8%A8%D8%A7%D8%AD%D8%AB-%D9%BE%DB%8C%D8%B4%D8%B1%D9%81%D8%AA%D9%87-%D8%B4%DB%8C%D8%A6-%DA%AF%D8%B1%D8%A7%DB%8C%DB%8C)">🔗</a></h2>
+<blockquote dir="auto">
+<p>همون طور که میدونیم سپهر یکمی دست و پا چلفتیه!!</p>
+</blockquote>
+<p dir="auto">واسه همین ممکنه ورودی های غلط به برنامه ای که برای تاریخ و زمان نوشته بده! از طرفی دیگه از دیباگ کردن کداش و assert نوشتن خسته شده! حالا سپهر به کمک شما احتیاج داره که اگه ورودی هاشو غلط داد بتونه هندلشون کنه.</p>
+<p dir="auto">حالا مشکلاتی که میتونن پیش بیان به شکل زیر هستن:</p>
+<h2 dir="auto" id="کلاس-time"><strong>کلاس</strong>  <code dir="ltr">Time</code><a class="anchorLink" href="https://quera.org/course/assignments/39882/print#%DA%A9%D9%84%D8%A7%D8%B3-time">🔗</a></h2>
+<ul dir="auto">
+<li>در صورت بروز خطا در متغیر <strong>دقیقه یا ساعت</strong>، یک شیئ از کلاس <code dir="ltr">TimeException</code> را <code dir="ltr">throw</code> کنید که شامل یک متغیر برای نمایش مقدار خطا و یک متن برای توضیح بیشتر خطاست.</li>
+</ul>
+<h2 dir="auto" id="کلاس-date"><strong>کلاس</strong> <code dir="ltr">Date</code><a class="anchorLink" href="https://quera.org/course/assignments/39882/print#%DA%A9%D9%84%D8%A7%D8%B3-date">🔗</a></h2>
+<ul dir="auto">
+<li>در صورت بروز خطا برای <strong>روز</strong>، مقدار <code dir="ltr">int</code> را <code dir="ltr">throw</code> کنید.</li>
+<li>اگر برای مقدار <strong>ماه</strong> خطا پیش اومد، ‍<code dir="ltr">out_of_range</code> را     <code dir="ltr">throw</code> کنید. (برای اطلاعات بیشتر درمورد این کلاس، به <a href="https://en.cppreference.com/w/cpp/error/out_of_range" target="_blank">این لینک</a> مراجعه کنید.)</li>
+<li>در صورت بروز خطا برای <strong>سال</strong> یک شیئ از کلاس ‍<code dir="ltr">DateException</code> را <code dir="ltr">throw</code> کنید که مشابه کلاس <code dir="ltr">TimeException</code> است.</li>
+</ul>
+<h2 dir="auto" id="کلاس-datetime"><strong>کلاس</strong> <code dir="ltr">DateTime</code><a class="anchorLink" href="https://quera.org/course/assignments/39882/print#%DA%A9%D9%84%D8%A7%D8%B3-datetime">🔗</a></h2>
+<ul dir="auto">
+<li>خطاهای مربوط به متغیر <strong>دقیقه</strong> کلاس <code dir="ltr">Time</code> را رسیدگی کنید و نزدیک ترین عدد را کنید.</li>
+<li>خطای <code dir="ltr">int</code> مربوط به <strong>روز</strong> در کلاس <code dir="ltr">Date</code> را رسیدگی کنید و نزدیک ترین عدد را جایگزین کنید.</li>
+<li>خطا های مربوط به <strong>ساعت و یا سال</strong> را <code dir="ltr">catch</code> کنید و خطای <code dir="ltr">DateTimeException</code> را <code dir="ltr">throw</code> کنید. (چون خطای این دو مورد مهم هستند و امکان رسیدگی به آن در این کلاس نیست.)</li>
+</ul>
+<h2 dir="auto" id="موارد-مهم:"><strong>موارد مهم:</strong><a class="anchorLink" href="https://quera.org/course/assignments/39882/print#%D9%85%D9%88%D8%A7%D8%B1%D8%AF-%D9%85%D9%87%D9%85:">🔗</a></h2>
+<ul dir="auto">
+<li>در برنامه خود تا حد امکان از <strong>تکرار کد خودداری کنید</strong> و تا حد امکان خطا ها را در یک قسمت رسیدگی کنید.</li>
+<li>کلاس های خطای شما باید از کلاس <code dir="ltr">Exception</code> ارث ببرند.(توضیحات این کلاس در ا<a href="https://en.cppreference.com/w/cpp/error/exception" target="_blank">ین لینک</a> است.)</li>
+<li>در <code dir="ltr">main</code> برنامه خطای مربوط به <code dir="ltr">DateTimeException</code> را <code dir="ltr">catch</code> کنید و در صفحه کنسول متن مربوط به خطا را چاپ کنید.</li>
+<li>در <code dir="ltr">main</code> برنامه مثال هایی برای <strong>چک کردن سناریو های بالا</strong> بزنید.</li>
+</ul>
+<div class="ui basic modal" id="img-modal">
+            <div class="image content" style="justify-content: center; align-items: center">
+                <img class="image" style="max-width: 100%" src="https://quera.org/course/assignments/39882/print">
+            </div>
+        </div></div>
+</div>
+
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+        render_problem_text('description_md-134269', 'description_html-134269');
+    });
+</script>
+      </div>
+    
+      <div class="qu-problem-segment" style="page-break-after: always">
+        
+
+<div style="display: none;" id="description_md-134270">صورت سوال در فایل PDF تمرین است.
+---
+در این سوال شما باید با توجه به فایل پروژه ای که مربوط به پروژه های قبلی این درس بوده است
+فایل PDF شامل یکی از پروژه های درس برنامه نویسی پیشرفته است. در این سوال شما باید با توجه به توضیحات پروژه UML این پروژه را طراحی کنید.
+
+در نهایت یک فایل PDF شامل طراحی خود به همراه لینک یک **ویدیو حداکثر ۳ دقیقه** ای برای توضیح و دفاع از طراحی خود آپلود کنید.
+
+**در هنگام طراحی به موارد زیر توجه کنید:**
+- به خوبی از روابط شیئ گرایی استفاده کنید و تا حد امکان از اصول **SOLID** که در کارگاه بحث شد استفاده کنید. (برای اطلاعات بیشتر می‌توانید به [این لینک](http://daisymolving.github.io/) مراجعه کنید.)
+- نیازی به جزئیات کامل نیست و توابع مهم در طراحی کافی است.
+- به دسترسی های هر کلاس با توجه به توابعی که دارد دقت کنید</div>
+<div>
+    <div class="ui center aligned fluid container">
+        <h1>دست گرمی پروژه :) (OOP)</h1>
+    </div>
+    <br>
+    <div class="description-html" id="description_html-134270"><h2 dir="auto" id="صورت-سوال-در-فایل-pdf-تمرین-است.">صورت سوال در فایل PDF تمرین است.<a class="anchorLink" href="https://quera.org/course/assignments/39882/print#%D8%B5%D9%88%D8%B1%D8%AA-%D8%B3%D9%88%D8%A7%D9%84-%D8%AF%D8%B1-%D9%81%D8%A7%DB%8C%D9%84-pdf-%D8%AA%D9%85%D8%B1%DB%8C%D9%86-%D8%A7%D8%B3%D8%AA.">🔗</a></h2>
+<p dir="auto">در این سوال شما باید با توجه به فایل پروژه ای که مربوط به پروژه های قبلی این درس بوده است
+فایل PDF شامل یکی از پروژه های درس برنامه نویسی پیشرفته است. در این سوال شما باید با توجه به توضیحات پروژه UML این پروژه را طراحی کنید.</p>
+<p dir="auto">در نهایت یک فایل PDF شامل طراحی خود به همراه لینک یک <strong>ویدیو حداکثر ۳ دقیقه</strong> ای برای توضیح و دفاع از طراحی خود آپلود کنید.</p>
+<p dir="auto"><strong>در هنگام طراحی به موارد زیر توجه کنید:</strong></p>
+<ul dir="auto">
+<li>به خوبی از روابط شیئ گرایی استفاده کنید و تا حد امکان از اصول <strong>SOLID</strong> که در کارگاه بحث شد استفاده کنید. (برای اطلاعات بیشتر می‌توانید به <a href="http://daisymolving.github.io/" target="_blank">این لینک</a> مراجعه کنید.)</li>
+<li>نیازی به جزئیات کامل نیست و توابع مهم در طراحی کافی است.</li>
+<li>به دسترسی های هر کلاس با توجه به توابعی که دارد دقت کنید</li>
+</ul>
+<div class="ui basic modal" id="img-modal">
+            <div class="image content" style="justify-content: center; align-items: center">
+                <img class="image" style="max-width: 100%" src="https://quera.org/course/assignments/39882/print">
+            </div>
+        </div></div>
+</div>
+
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+        render_problem_text('description_md-134270', 'description_html-134270');
+    });
+</script>
+      </div>
+    
+    
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          // open all <details> tags
+          $('details').attr('open', '');
+          // print!
+          window.print();
+        });
+      </script>
+    
+  
+<div style="display: none; visibility: hidden;"><script>!function(c,a,b){c.yektanetAnalyticsObject=b;c[b]=c[b]||function(){c[b].q.push(arguments)};c[b].q=c[b].q||[];var d=new Date;d=d.getFullYear().toString()+"0"+d.getMonth()+"0"+d.getDate()+"0"+d.getHours();var e=a.getElementsByTagName("script")[0];a=a.createElement("script");a.id="ua-script-yn-3147-adv";a.dataset.analyticsobject=b;a.async=1;a.type="text/javascript";a.src="https://cdn.yektanet.com/rg_woebegone/scripts_v2/yn-3147-adv/rg.complete.js?v\x3d"+d;e.parentNode.insertBefore(a,e)}(window,document,
+"yektanet");</script></div><script type="text/javascript" id="" src="./OOP_class_design_files/retargeting.js"></script><script type="text/javascript" id="">(function(a,e,b,f,g,c,d){a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)};c=e.createElement(f);c.async=1;c.src="https://www.clarity.ms/tag/"+g+"?ref\x3dgtm2";d=e.getElementsByTagName(f)[0];d.parentNode.insertBefore(c,d)})(window,document,"clarity","script","at7xzpaerh");</script><iframe src="./OOP_class_design_files/fingerprint.html" style="display: none;"></iframe><iframe id="_hjSafeContext_80280313" title="_hjSafeContext" tabindex="-1" aria-hidden="true" src="./OOP_class_design_files/saved_resource.html" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe></body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+  div.grammarly-desktop-integration {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select:none;
+    user-select:none;
+  }
+
+  div.grammarly-desktop-integration:before {
+    content: attr(data-content);
+  }
+</style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>

@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)https://quera.org/course/assignments/39880/print -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>مباحث پیشرفته شیئ گرایی</title>
+    
+    <meta name="fontiran.com:license" content="56AXFY">
+    <link rel="shortcut icon" type="image/png" href="https://quera.org/static/images/logo/favicon/favicon-16x16.2-4bcbe4f363d7.png">
+    <meta name="theme-color" content="#09c">
+    
+
+
+  <script async="" src="./OOP_advanced_concepts_files/clarity.js"></script><script type="text/javascript" async="" src="./OOP_advanced_concepts_files/analytics.js"></script><script type="text/javascript" async="" src="./OOP_advanced_concepts_files/js"></script><script async="" src="./OOP_advanced_concepts_files/at7xzpaerh"></script><script id="ua-script-yn-3147-adv" data-analyticsobject="yektanet" async="" type="text/javascript" src="./OOP_advanced_concepts_files/rg.complete.js"></script><script type="text/javascript" async="" src="./OOP_advanced_concepts_files/hotjar-3239305.js"></script><script gtm="GTM-TDRQP6V" type="text/javascript" async="" src="./OOP_advanced_concepts_files/optimize.js"></script><script type="text/javascript" integrity="sha384-xwN6OCSgIf1SF9jtD6pouaSwCvpobyV3lanBGQ1d33MwTxLarbQxUif0Slt0npCM" crossorigin="anonymous" async="" src="./OOP_advanced_concepts_files/amplitude-8.3.0-min.gz.js"></script><script async="" src="./OOP_advanced_concepts_files/gtm.js"></script><script>
+    /* beautify ignore:start */
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TDRQP6V');
+    /* beautify ignore:end */
+  </script>
+  
+  
+    <script>
+  const amplitudeApiKey = "ad324f3bb41b4d895c353238cfecb4e9" || null;
+  const amplitudeVisitorID = "NDI3OTI0Mjc5MjQyNzkyNJnnGD4sDL0ub0zIO0ydxss=" || null;
+  // console.log("***", {amplitudeApiKey, amplitudeVisitorID});
+  if (amplitudeApiKey && amplitudeVisitorID) {
+    /* beautify ignore:start */
+    (function(e,t){var n=e.amplitude||{_q:[],_iq:{}};
+      var r=t.createElement("script")
+      ;r.type="text/javascript"
+      ;r.integrity="sha384-xwN6OCSgIf1SF9jtD6pouaSwCvpobyV3lanBGQ1d33MwTxLarbQxUif0Slt0npCM"
+      ;r.crossOrigin="anonymous";r.async=true
+      ;r.src="https://cdn.amplitude.com/libs/amplitude-8.3.0-min.gz.js"
+      ;r.onload=function(){if(!e.amplitude.runQueuedFunctions){
+        console.log("[Amplitude] Error: could not load SDK")}}
+      ;var i=t.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)
+      ;function s(e,t){e.prototype[t]=function(){
+        this._q.push([t].concat(Array.prototype.slice.call(arguments,0)));return this}}
+      var o=function(){this._q=[];return this}
+      ;var a=["add","append","clearAll","prepend","set","setOnce","unset","preInsert","postInsert","remove"]
+      ;for(var c=0;c<a.length;c++){s(o,a[c])}n.Identify=o;var u=function(){this._q=[]
+        ;return this}
+      ;var l=["setProductId","setQuantity","setPrice","setRevenueType","setEventProperties"]
+      ;for(var p=0;p<l.length;p++){s(u,l[p])}n.Revenue=u
+      ;var d=["init","logEvent","logRevenue","setUserId","setUserProperties","setOptOut","setVersionName","setDomain","setDeviceId","enableTracking","setGlobalUserProperties","identify","clearUserProperties","setGroup","logRevenueV2","regenerateDeviceId","groupIdentify","onInit","logEventWithTimestamp","logEventWithGroups","setSessionId","resetSessionId"]
+      ;function v(e){function t(t){e[t]=function(){
+        e._q.push([t].concat(Array.prototype.slice.call(arguments,0)))}}
+        for(var n=0;n<d.length;n++){t(d[n])}}v(n);n.getInstance=function(e){
+          e=(!e||e.length===0?"$default_instance":e).toLowerCase()
+          ;if(!Object.prototype.hasOwnProperty.call(n._iq,e)){n._iq[e]={_q:[]};v(n._iq[e])
+          }return n._iq[e]};e.amplitude=n})(window,document);
+    /* beautify ignore:end */
+
+    amplitude.getInstance().init(amplitudeApiKey, amplitudeVisitorID);
+
+    // === log event example ===
+    // var event = "Button Clicked";
+    // var eventProperties = {
+    //     "hover time": "100ms"
+    // };
+    // amplitude.getInstance().logEvent(event, eventProperties);
+  }
+</script>
+
+  
+  
+
+
+    <script type="text/javascript" src="./OOP_advanced_concepts_files/common.min.2-ff5d1031dabd.js"></script>
+    <link rel="stylesheet" type="text/css" href="./OOP_advanced_concepts_files/semantic.rtl.min.2-87f68286e0ba.css">
+    <link rel="stylesheet" type="text/css" href="./OOP_advanced_concepts_files/style.2-b80b5257106c.css">
+    <link rel="stylesheet" type="text/css" href="./OOP_advanced_concepts_files/style.2-b3ef4156e542.css">
+    <script type="text/javascript" src="./OOP_advanced_concepts_files/main.2-d263ad2294d7.js"></script>
+    <script src="./OOP_advanced_concepts_files/prism.min.2-d002bc8c9f64.js" data-manual=""></script>
+    <script type="text/javascript" src="./OOP_advanced_concepts_files/notebook.2-0c223d43deb5.js"></script>
+    <script type="text/javascript" src="./OOP_advanced_concepts_files/markdown-moratab.2-dbca098e5b03.js"></script>
+    <link rel="stylesheet" type="text/css" href="./OOP_advanced_concepts_files/prism.2-c967968a069e.css">
+    <link rel="stylesheet" href="./OOP_advanced_concepts_files/katex.min.2-852d91d247c4.css">
+    <style>
+      @page {
+        margin: 25mm 20mm;
+      }
+
+      @media print {
+
+        pre,
+        code {
+          white-space: pre-wrap;
+          /* Since CSS 2.1 */
+          white-space: -moz-pre-wrap;
+          /* Mozilla, since 1999 */
+          white-space: -o-pre-wrap;
+          /* Opera 7 */
+          word-wrap: break-word;
+          /* Internet Explorer 5.5+ */
+        }
+      }
+
+      pre {
+        background-color: #dce8ec !important
+      }
+    </style>
+  <meta http-equiv="origin-trial" content="A727AcAeLCei/ZogJHBlJUS63SxP6AeIROo7qXrkjrxkoxBu0eSSmypAHmGYwk4HjBMQp5nxCFODzfVnUIe31AQAAAB7eyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjg4MDgzMTk5LCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A727AcAeLCei/ZogJHBlJUS63SxP6AeIROo7qXrkjrxkoxBu0eSSmypAHmGYwk4HjBMQp5nxCFODzfVnUIe31AQAAAB7eyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjg4MDgzMTk5LCJpc1RoaXJkUGFydHkiOnRydWV9"><script attributionsrc="" type="text/javascript" async="" src="./OOP_advanced_concepts_files/f.txt"></script><script async="" src="./OOP_advanced_concepts_files/modules.9ac4218629ac8ca6cf73.js" charset="utf-8"></script></head>
+
+  <body dir="rtl" data-new-gr-c-s-check-loaded="14.1110.0" data-gr-ext-installed="">
+    
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TDRQP6V" height="0" width="0"
+    style="display:none;visibility:hidden"></iframe></noscript>
+
+
+    
+      <div class="qu-problem-segment" style="page-break-after: always">
+        
+
+<div style="display: none;" id="description_md-134252">پیش‌نیاز مسئله: دوراهی (مباحث اولیه شیئ گرایی)
+----------
+خب بیاین دوراهیمونو upgrade کنیم! حالا چجوری؟؟
+
+میخایم درخت ما محدود به عدد صحیح نباشه، یعنی یه بار درخت اعداد اعشاری رو بسازیم یه بار کاراکتر و ... .
+
+برای این کار از کلاس تمپلیت ها استفاده می کنیم! کلاس های تمپلیت به ما قابلیت ساخت کلاس ها با نوع داده های متفاوت(بر اساس پارامتری که به اون ها پاس می دیم) رو میدن. به صورت کلی کلاس های تمپلیت برای پیاده سازی کانتینر ها (Vector , ...) استفاده میشن. آبجکت های این کلاس ها هم با پاس دادن پارامتر مربوطه ساخته میشن. مثال زیر یک کلاس تمپلیته که وظیفش نگه داشتن یک عضو از هر نوع داده ست و برایش یک تابع divideBy2 تعریف شده که المنت مورد نظر رو بر دو تقسیم می کنه.
+```
+template &lt;class T&gt;
+class MyTemplate {
+T element;
+public:
+MyTemplate (T arg) {element=arg;}
+T divideBy2 () {return element/2;}
+};
+```
+همچنین می تونیم در این کلاس ها برای یک نوع داده ی خاص کلاس را شخصی سازی کنیم، که به این کار **Template Specialization** میگن. برای مثال بالا شخصی سازی یک تمپلیت برای نوع داده ی کاراکتر بهتره، پس ما به جای تابع divideBy2 یک تابع printElement برای نوع داده ی char تعریف می کنیم:
+
+```
+template &lt;&gt;
+class MyTemplate &lt;char&gt; {
+char element;
+public:
+MyTemplate (char arg) {element=arg;}
+char printElement ()
+{
+return element;
+}
+};
+```
+
+حالا ازتون میخایم که سوال دوراهی جلسه قبل رو کمی تغییر بدین و با تمپلیت بزنین و بعد اجراش کنین.
+
+احتمالا هنگام اجراش به ارور لینک برمی خورین. **علت این مشکل**، **توضیح در مورد این ارور** و **راه حل برای برطرف سازیش** رو توی یک **PDF** بنویسین و به کد upgrade شده ضمیمه کنین و بفرستین.</div>
+<div>
+    <div class="ui center aligned fluid container">
+        <h1>دوراهی چندگانه (Template class)</h1>
+    </div>
+    <br>
+    <div class="description-html" id="description_html-134252"><h2 dir="auto" id="پیش‌نیاز-مسئله:-دوراهی-(مباحث-اولیه-شیئ-گرایی)">پیش‌نیاز مسئله: دوراهی (مباحث اولیه شیئ گرایی)<a class="anchorLink" href="https://quera.org/course/assignments/39880/print#%D9%BE%DB%8C%D8%B4%E2%80%8C%D9%86%DB%8C%D8%A7%D8%B2-%D9%85%D8%B3%D8%A6%D9%84%D9%87:-%D8%AF%D9%88%D8%B1%D8%A7%D9%87%DB%8C-(%D9%85%D8%A8%D8%A7%D8%AD%D8%AB-%D8%A7%D9%88%D9%84%DB%8C%D9%87-%D8%B4%DB%8C%D8%A6-%DA%AF%D8%B1%D8%A7%DB%8C%DB%8C)" style="visibility: hidden;">🔗</a></h2>
+<p dir="auto">خب بیاین دوراهیمونو upgrade کنیم! حالا چجوری؟؟</p>
+<p dir="auto">میخایم درخت ما محدود به عدد صحیح نباشه، یعنی یه بار درخت اعداد اعشاری رو بسازیم یه بار کاراکتر و ... .</p>
+<p dir="auto">برای این کار از کلاس تمپلیت ها استفاده می کنیم! کلاس های تمپلیت به ما قابلیت ساخت کلاس ها با نوع داده های متفاوت(بر اساس پارامتری که به اون ها پاس می دیم) رو میدن. به صورت کلی کلاس های تمپلیت برای پیاده سازی کانتینر ها (Vector , ...) استفاده میشن. آبجکت های این کلاس ها هم با پاس دادن پارامتر مربوطه ساخته میشن. مثال زیر یک کلاس تمپلیته که وظیفش نگه داشتن یک عضو از هر نوع داده ست و برایش یک تابع divideBy2 تعریف شده که المنت مورد نظر رو بر دو تقسیم می کنه.</p>
+<div class="code-toolbar"><pre class="code-block language-none" dir="ltr" tabindex="0"><code data-filename="undefined" class="language-none">template &lt;class T&gt;
+class MyTemplate {
+T element;
+public:
+MyTemplate (T arg) {element=arg;}
+T divideBy2 () {return element/2;}
+};</code></pre><div class="toolbar"><div class="toolbar-item"><span>Plain text</span></div><div class="toolbar-item"><button class="copy-to-clipboard-button" type="button" data-copy-state="copy"><span>Copy</span></button></div></div></div><p dir="auto">همچنین می تونیم در این کلاس ها برای یک نوع داده ی خاص کلاس را شخصی سازی کنیم، که به این کار <strong>Template Specialization</strong> میگن. برای مثال بالا شخصی سازی یک تمپلیت برای نوع داده ی کاراکتر بهتره، پس ما به جای تابع divideBy2 یک تابع printElement برای نوع داده ی char تعریف می کنیم:</p>
+<div class="code-toolbar"><pre class="code-block language-none" dir="ltr" tabindex="0"><code data-filename="undefined" class="language-none">template &lt;&gt;
+class MyTemplate &lt;char&gt; {
+char element;
+public:
+MyTemplate (char arg) {element=arg;}
+char printElement ()
+{
+return element;
+}
+};</code></pre><div class="toolbar"><div class="toolbar-item"><span>Plain text</span></div><div class="toolbar-item"><button class="copy-to-clipboard-button" type="button" data-copy-state="copy"><span>Copy</span></button></div></div></div><p dir="auto">حالا ازتون میخایم که سوال دوراهی جلسه قبل رو کمی تغییر بدین و با تمپلیت بزنین و بعد اجراش کنین.</p>
+<p dir="auto">احتمالا هنگام اجراش به ارور لینک برمی خورین. <strong>علت این مشکل</strong>، <strong>توضیح در مورد این ارور</strong> و <strong>راه حل برای برطرف سازیش</strong> رو توی یک <strong>PDF</strong> بنویسین و به کد upgrade شده ضمیمه کنین و بفرستین.</p>
+<div class="ui basic modal" id="img-modal">
+            <div class="image content" style="justify-content: center; align-items: center">
+                <img class="image" style="max-width: 100%" src="https://quera.org/course/assignments/39880/print">
+            </div>
+        </div></div>
+</div>
+
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+        render_problem_text('description_md-134252', 'description_html-134252');
+    });
+</script>
+      </div>
+    
+      <div class="qu-problem-segment" style="page-break-after: always">
+        
+
+<div style="display: none;" id="description_md-134254">پیش‌نیاز مسئله: زمان شیئ است ۱ (مفاهیم اولیه شیئ گرایی)
+----------
+
+*شی گرایی همچنان مسئله مهمی برای سپهر هست و جدیدا با سربارگذاری عملگر ها آشنا شده است برای همین تصمیم گرفته که به مسئله های شی گرایی قبلی سر بزند و تابع های هرکدام را که توانست با استفاده از عملگر ها پیاده سازی کند و حال به سراغ کلاس time رفته است.*
+
+در این سوال ما می خواهیم برخی از توابع کلاس time  که در سوال **زمان شی است** نوشتیم را با سربار گذاری عملگر ها درست کنیم.
+
+- می خواهیم با استفاده از عمگر `&lt;&lt;‍` یک شی از کلاس time را از ورودی بگیرد(برای اینکار می توانید یا فرمت مشخض خاصی مشخص کنید یا پیام مناسب دهید.)
+
+
+    friend istream &amp; operator &gt;&gt; (istream &amp;in,  Time &amp;t){ 
+           in &gt;&gt; SOMETHING; 
+             return in;
+    }
+
+- می خواهیم با استفاده از عملگر `&gt;&gt;` شی از کلاس time  را چاپ کند و همچنین بنویسد که این ساعت در موقعی از شبانه روز است طبق تابعی که قبلا پیاده سازی کردید.
+
+
+    friend ostream &amp; operator &lt;&lt; (ostream &amp;out,  Time &amp;t){ 
+       out &lt;&lt; SOMETHING;
+       return out;
+    }
+
+- با استفاده از عملگر های `&gt;` یا `&lt;` یا `&gt;=` یا `&lt;=` بتوان ۲ شی از این کلاس را مقایسه کرد.
+
+
+    friend bool operator&lt;(const Time&amp; t1, const Time&amp; t2){
+       bool b;     
+       //do comparison 
+       return b;
+    }
+
+- میخواهیم عملیات cast کردن را با استفاده از overloading پیاده سازی کنیم، به شکلی که بتوانیم کلاس زمان را به رشته تبدیل کنیم.
+- همچنین عمگر `+` برای جمع دو زمان که یک شیئ زمان را بعنوان ورودی می‌گیرد.</div>
+<div>
+    <div class="ui center aligned fluid container">
+        <h1>زمان شئ است ۲ (operator overloading)</h1>
+    </div>
+    <br>
+    <div class="description-html" id="description_html-134254"><h2 dir="auto" id="پیش‌نیاز-مسئله:-زمان-شیئ-است-۱-(مفاهیم-اولیه-شیئ-گرایی)">پیش‌نیاز مسئله: زمان شیئ است ۱ (مفاهیم اولیه شیئ گرایی)<a class="anchorLink" href="https://quera.org/course/assignments/39880/print#%D9%BE%DB%8C%D8%B4%E2%80%8C%D9%86%DB%8C%D8%A7%D8%B2-%D9%85%D8%B3%D8%A6%D9%84%D9%87:-%D8%B2%D9%85%D8%A7%D9%86-%D8%B4%DB%8C%D8%A6-%D8%A7%D8%B3%D8%AA-%DB%B1-(%D9%85%D9%81%D8%A7%D9%87%DB%8C%D9%85-%D8%A7%D9%88%D9%84%DB%8C%D9%87-%D8%B4%DB%8C%D8%A6-%DA%AF%D8%B1%D8%A7%DB%8C%DB%8C)">🔗</a></h2>
+<p dir="auto"><em>شی گرایی همچنان مسئله مهمی برای سپهر هست و جدیدا با سربارگذاری عملگر ها آشنا شده است برای همین تصمیم گرفته که به مسئله های شی گرایی قبلی سر بزند و تابع های هرکدام را که توانست با استفاده از عملگر ها پیاده سازی کند و حال به سراغ کلاس time رفته است.</em></p>
+<p dir="auto">در این سوال ما می خواهیم برخی از توابع کلاس time  که در سوال <strong>زمان شی است</strong> نوشتیم را با سربار گذاری عملگر ها درست کنیم.</p>
+<ul dir="auto">
+<li>می خواهیم با استفاده از عمگر <code dir="ltr">&lt;&lt;‍</code> یک شی از کلاس time را از ورودی بگیرد(برای اینکار می توانید یا فرمت مشخض خاصی مشخص کنید یا پیام مناسب دهید.)</li>
+</ul>
+<div class="code-toolbar"><pre class="code-block language-none" dir="ltr" tabindex="0"><code data-filename="undefined" class="language-none">friend istream &amp; operator &gt;&gt; (istream &amp;in,  Time &amp;t){ 
+       in &gt;&gt; SOMETHING; 
+         return in;
+}</code></pre><div class="toolbar"><div class="toolbar-item"><span>Plain text</span></div><div class="toolbar-item"><button class="copy-to-clipboard-button" type="button" data-copy-state="copy"><span>Copy</span></button></div></div></div><ul dir="auto">
+<li>می خواهیم با استفاده از عملگر <code dir="ltr">&gt;&gt;</code> شی از کلاس time  را چاپ کند و همچنین بنویسد که این ساعت در موقعی از شبانه روز است طبق تابعی که قبلا پیاده سازی کردید.</li>
+</ul>
+<div class="code-toolbar"><pre class="code-block language-none" dir="ltr" tabindex="0"><code data-filename="undefined" class="language-none">friend ostream &amp; operator &lt;&lt; (ostream &amp;out,  Time &amp;t){ 
+   out &lt;&lt; SOMETHING;
+   return out;
+}</code></pre><div class="toolbar"><div class="toolbar-item"><span>Plain text</span></div><div class="toolbar-item"><button class="copy-to-clipboard-button" type="button" data-copy-state="copy"><span>Copy</span></button></div></div></div><ul dir="auto">
+<li>با استفاده از عملگر های <code dir="ltr">&gt;</code> یا <code dir="ltr">&lt;</code> یا <code dir="ltr">&gt;=</code> یا <code dir="ltr">&lt;=</code> بتوان ۲ شی از این کلاس را مقایسه کرد.</li>
+</ul>
+<div class="code-toolbar"><pre class="code-block language-none" dir="ltr" tabindex="0"><code data-filename="undefined" class="language-none">friend bool operator&lt;(const Time&amp; t1, const Time&amp; t2){
+   bool b;     
+   //do comparison 
+   return b;
+}</code></pre><div class="toolbar"><div class="toolbar-item"><span>Plain text</span></div><div class="toolbar-item"><button class="copy-to-clipboard-button" type="button" data-copy-state="copy"><span>Copy</span></button></div></div></div><ul dir="auto">
+<li>میخواهیم عملیات cast کردن را با استفاده از overloading پیاده سازی کنیم، به شکلی که بتوانیم کلاس زمان را به رشته تبدیل کنیم.</li>
+<li>همچنین عمگر <code dir="ltr">+</code> برای جمع دو زمان که یک شیئ زمان را بعنوان ورودی می‌گیرد.</li>
+</ul>
+<div class="ui basic modal" id="img-modal">
+            <div class="image content" style="justify-content: center; align-items: center">
+                <img class="image" style="max-width: 100%" src="https://quera.org/course/assignments/39880/print">
+            </div>
+        </div></div>
+</div>
+
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+        render_problem_text('description_md-134254', 'description_html-134254');
+    });
+</script>
+      </div>
+    
+      <div class="qu-problem-segment" style="page-break-after: always">
+        
+
+<div style="display: none;" id="description_md-134255">پیش‌نیاز مسئله: هپولی خسته شده (مباحث اولیه شیئ گرایی)
+
+----------
+&gt;  بیا روراست باشیم. من خستمممممم!!
+
+یک روز که هپولی داشت خستگی در می کرد به این فکر افتاد که اگر هر نفر بخواد اسم یک سری توابع برای ورودی گرفتن ، خروجی گرفتن ، جمع و ..... بخواهد تابع بنویسد و اسمی که دوست دارد را برایش بگذارد اینطوری اگر ما بخواهیم از اون کلاس استفاده کنیم، همش باید کد اون شخص نگاه کنیم و خب خیلی خسته کننده است برای همین رفت جستجو کرد و با سربارگذاری عملگر ها(operator overloading) آشنا شد و تصمیم گرفت که کد ماتریسی که هفته پیش زد با استفاده از این روش بهینه تر بکند.
+
+**لیست توابعی که باید عوض شوند:**
+- به جای تابع `matrix_cin`  از عملگر `&lt;&lt;` استفاده کنید
+- به جای تابع `matrix_cout` از عملگر `&gt;&gt;` استفاده کنید
+- به جای تابع ضرب و تفریق و جمع یک ماتریس با ماتریس دیگر را از `*`, `-` , `+` استفاده کنید
+- همچنین عملگر های `*=`، `+=` و `-=` برای اینکه نتیجه محاسبات در خود ماتریس ذخیره کند
+- به جای تابع ضرب و تقسیم یک عدد در یک ماتریس از علامت `*`, `/`  استفاده کنید
+- به جای تابع ‍`is_equal` از عملگر `==` استفاده کنید
+- به جای تابع `is_not_equal‍` عملگر `!=` استفاده کنید
+- استفاده کردن از عملگر () به صورت (ستون، ردیف) برای نشان دادن داده موجود در آن خانه
+- همچنین از عملگر `++` و `--` استفاده کنید، به این صورت که همه مقادیر ماتریس را به علاوه ۱ یا منهای ۱ بکند (عملگر ها در هر ۲ حالت **پسوند و پیشوند** تعریف شده باشند)
+
+**موارد دیگر:**
+
+- به جای استفاده کردن از عملگر (x,y) عملگر [y][x] را پیاده سازی کنید و روش های مختلف را در قالب یک فایل PDF ارسال کنید.</div>
+<div>
+    <div class="ui center aligned fluid container">
+        <h1>هپولی خسته تر از هفته پیش (operator overloading)</h1>
+    </div>
+    <br>
+    <div class="description-html" id="description_html-134255"><p dir="auto">پیش‌نیاز مسئله: هپولی خسته شده (مباحث اولیه شیئ گرایی)</p>
+<hr dir="auto">
+<blockquote dir="auto">
+<p>بیا روراست باشیم. من خستمممممم!!</p>
+</blockquote>
+<p dir="auto">یک روز که هپولی داشت خستگی در می کرد به این فکر افتاد که اگر هر نفر بخواد اسم یک سری توابع برای ورودی گرفتن ، خروجی گرفتن ، جمع و ..... بخواهد تابع بنویسد و اسمی که دوست دارد را برایش بگذارد اینطوری اگر ما بخواهیم از اون کلاس استفاده کنیم، همش باید کد اون شخص نگاه کنیم و خب خیلی خسته کننده است برای همین رفت جستجو کرد و با سربارگذاری عملگر ها(operator overloading) آشنا شد و تصمیم گرفت که کد ماتریسی که هفته پیش زد با استفاده از این روش بهینه تر بکند.</p>
+<p dir="auto"><strong>لیست توابعی که باید عوض شوند:</strong></p>
+<ul dir="auto">
+<li>به جای تابع <code dir="ltr">matrix_cin</code>  از عملگر <code dir="ltr">&lt;&lt;</code> استفاده کنید</li>
+<li>به جای تابع <code dir="ltr">matrix_cout</code> از عملگر <code dir="ltr">&gt;&gt;</code> استفاده کنید</li>
+<li>به جای تابع ضرب و تفریق و جمع یک ماتریس با ماتریس دیگر را از <code dir="ltr">*</code>, <code dir="ltr">-</code> , <code dir="ltr">+</code> استفاده کنید</li>
+<li>همچنین عملگر های <code dir="ltr">*=</code>، <code dir="ltr">+=</code> و <code dir="ltr">-=</code> برای اینکه نتیجه محاسبات در خود ماتریس ذخیره کند</li>
+<li>به جای تابع ضرب و تقسیم یک عدد در یک ماتریس از علامت <code dir="ltr">*</code>, <code dir="ltr">/</code>  استفاده کنید</li>
+<li>به جای تابع ‍<code dir="ltr">is_equal</code> از عملگر <code dir="ltr">==</code> استفاده کنید</li>
+<li>به جای تابع <code dir="ltr">is_not_equal‍</code> عملگر <code dir="ltr">!=</code> استفاده کنید</li>
+<li>استفاده کردن از عملگر () به صورت (ستون، ردیف) برای نشان دادن داده موجود در آن خانه</li>
+<li>همچنین از عملگر <code dir="ltr">++</code> و <code dir="ltr">--</code> استفاده کنید، به این صورت که همه مقادیر ماتریس را به علاوه ۱ یا منهای ۱ بکند (عملگر ها در هر ۲ حالت <strong>پسوند و پیشوند</strong> تعریف شده باشند)</li>
+</ul>
+<p dir="auto"><strong>موارد دیگر:</strong></p>
+<ul dir="auto">
+<li>به جای استفاده کردن از عملگر (x,y) عملگر [y][x] را پیاده سازی کنید و روش های مختلف را در قالب یک فایل PDF ارسال کنید.</li>
+</ul>
+<div class="ui basic modal" id="img-modal">
+            <div class="image content" style="justify-content: center; align-items: center">
+                <img class="image" style="max-width: 100%" src="https://quera.org/course/assignments/39880/print">
+            </div>
+        </div></div>
+</div>
+
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+        render_problem_text('description_md-134255', 'description_html-134255');
+    });
+</script>
+      </div>
+    
+      <div class="qu-problem-segment" style="page-break-after: always">
+        
+
+<div style="display: none;" id="description_md-134256">+ محدودیت زمان: ۱ ثانیه
++ محدودیت حافظه: ۲۵۶ مگابایت
+
+----------
+*هپولی تصمیم گرفته که برای اینکه حسابی operator overloading بلد بشه یک کلاس چندجمله ای درست کنه ولی خب دوست داره که بهش کمک کنید برای همین مشخصات کلاسی که می خواد درست کنه برای شما می نویسد تا به هپولی کمک کنید.*
+
+**کلاس چندجمله ای**
+در این کلاس ضرایب یک چندجمله ای را در یک وکتور نگه می داریم:
+- ضرایب همگی صحیح است
+- درجه همه ضرایب حداکثر ۲۰ می باشد
+متد های کلاس چندجمله ای:
+- سازنده پیش فرضی که تمام ضرایب را در ابتدا صفر قرار می دهد
+- سازنده کپی که چندجمله ای را در یک چند جمله ای دیگر کپی می کند
+- عملگر  تک عملوندی "-" که یک چند جمله ای را قرینه می کند
+- عملگر های جمع و تفریق و ضرب برای ۲ چند جمله ای را تعریف کنید
+-  عملگر های `==` ، `&gt;=` ،`=&gt;`، `&gt;`، `&lt;` را برای ۲ چندجمله ای تعریف کنید
+- عملگر `&lt;&lt;` برای ورودی گرفتن یک چند جمله ای به صورت فرم استاندارد و نسبت داد آن به یک شی چندجمله ای
+- عملگر `&gt;&gt;` برای چاپ کردن چندجمله ای به صورت فرم استاندارد.
+
+*فرم استاندارد به صورت زیر می باشد:*
+
+	...
+	6x^7-2x^2+x-3
+	19x^17+34x-78
+
+**نکات:**
+- در هنگام چاپ باید بر اساس درجه به صورت نزولی چاپ شود
+- در هنگام ورودی نیازی به رعایت ترتیب نیست
+- توان صفر به صورت عدد ثابت نشان داده می شود
+- ضریب صفر نشان داده نمی شود
+- توان یک در x^1 نشان داده نمی شود
+- اگر ضریب ۱+ یا ۱- باشد، ضریب را نشان نمی دهد جز در شرایطی که توان صفر باشد
+
+**موارد امتیازی:**
+- استفاده از regex برای گرفتن ورودی. (برای آشنایی بیشتر [این لینک](https://www.geeksforgeeks.org/regex-regular-expression-in-c/) و [این لینک](https://www.softwaretestinghelp.com/regex-in-cpp/#regex_match) را مشاهده کنید.)
+- پیاده سازی عملگر های `/` برای تقسیم و `٪` برای باقی مانده ۲ چندجمله ای</div>
+<div>
+    <div class="ui center aligned fluid container">
+        <h1>کلاس چند جمله‌ای (operator overloading)</h1>
+    </div>
+    <br>
+    <div class="description-html" id="description_html-134256"><ul dir="auto">
+<li>محدودیت زمان: ۱ ثانیه</li>
+<li>محدودیت حافظه: ۲۵۶ مگابایت</li>
+</ul>
+<hr dir="auto">
+<p dir="auto"><em>هپولی تصمیم گرفته که برای اینکه حسابی operator overloading بلد بشه یک کلاس چندجمله ای درست کنه ولی خب دوست داره که بهش کمک کنید برای همین مشخصات کلاسی که می خواد درست کنه برای شما می نویسد تا به هپولی کمک کنید.</em></p>
+<p dir="auto"><strong>کلاس چندجمله ای</strong>
+در این کلاس ضرایب یک چندجمله ای را در یک وکتور نگه می داریم:</p>
+<ul dir="auto">
+<li>ضرایب همگی صحیح است</li>
+<li>درجه همه ضرایب حداکثر ۲۰ می باشد
+متد های کلاس چندجمله ای:</li>
+<li>سازنده پیش فرضی که تمام ضرایب را در ابتدا صفر قرار می دهد</li>
+<li>سازنده کپی که چندجمله ای را در یک چند جمله ای دیگر کپی می کند</li>
+<li>عملگر  تک عملوندی "-" که یک چند جمله ای را قرینه می کند</li>
+<li>عملگر های جمع و تفریق و ضرب برای ۲ چند جمله ای را تعریف کنید</li>
+<li>عملگر های <code dir="ltr">==</code> ، <code dir="ltr">&gt;=</code> ،<code dir="ltr">=&gt;</code>، <code dir="ltr">&gt;</code>، <code dir="ltr">&lt;</code> را برای ۲ چندجمله ای تعریف کنید</li>
+<li>عملگر <code dir="ltr">&lt;&lt;</code> برای ورودی گرفتن یک چند جمله ای به صورت فرم استاندارد و نسبت داد آن به یک شی چندجمله ای</li>
+<li>عملگر <code dir="ltr">&gt;&gt;</code> برای چاپ کردن چندجمله ای به صورت فرم استاندارد.</li>
+</ul>
+<p dir="auto"><em>فرم استاندارد به صورت زیر می باشد:</em></p>
+<div class="code-toolbar"><pre class="code-block language-none" dir="ltr" tabindex="0"><code data-filename="undefined" class="language-none">...
+6x^7-2x^2+x-3
+19x^17+34x-78</code></pre><div class="toolbar"><div class="toolbar-item"><span>Plain text</span></div><div class="toolbar-item"><button class="copy-to-clipboard-button" type="button" data-copy-state="copy"><span>Copy</span></button></div></div></div><p dir="auto"><strong>نکات:</strong></p>
+<ul dir="auto">
+<li>در هنگام چاپ باید بر اساس درجه به صورت نزولی چاپ شود</li>
+<li>در هنگام ورودی نیازی به رعایت ترتیب نیست</li>
+<li>توان صفر به صورت عدد ثابت نشان داده می شود</li>
+<li>ضریب صفر نشان داده نمی شود</li>
+<li>توان یک در x^1 نشان داده نمی شود</li>
+<li>اگر ضریب ۱+ یا ۱- باشد، ضریب را نشان نمی دهد جز در شرایطی که توان صفر باشد</li>
+</ul>
+<p dir="auto"><strong>موارد امتیازی:</strong></p>
+<ul dir="auto">
+<li>استفاده از regex برای گرفتن ورودی. (برای آشنایی بیشتر <a href="https://www.geeksforgeeks.org/regex-regular-expression-in-c/" target="_blank">این لینک</a> و <a href="https://www.softwaretestinghelp.com/regex-in-cpp/#regex_match" target="_blank">این لینک</a> را مشاهده کنید.)</li>
+<li>پیاده سازی عملگر های <code dir="ltr">/</code> برای تقسیم و <code dir="ltr">٪</code> برای باقی مانده ۲ چندجمله ای</li>
+</ul>
+<div class="ui basic modal" id="img-modal">
+            <div class="image content" style="justify-content: center; align-items: center">
+                <img class="image" style="max-width: 100%" src="https://quera.org/course/assignments/39880/print">
+            </div>
+        </div></div>
+</div>
+
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+        render_problem_text('description_md-134256', 'description_html-134256');
+    });
+</script>
+      </div>
+    
+      <div class="qu-problem-segment" style="page-break-after: always">
+        
+
+<div style="display: none;" id="description_md-134257">صورت سوال، سوال اول پی دی اف تمرین است.</div>
+<div>
+    <div class="ui center aligned fluid container">
+        <h1>unique pairs (Class termplate)</h1>
+    </div>
+    <br>
+    <div class="description-html" id="description_html-134257"><p dir="auto">صورت سوال، سوال اول پی دی اف تمرین است.</p>
+<div class="ui basic modal" id="img-modal">
+            <div class="image content" style="justify-content: center; align-items: center">
+                <img class="image" style="max-width: 100%" src="https://quera.org/course/assignments/39880/print">
+            </div>
+        </div></div>
+</div>
+
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+        render_problem_text('description_md-134257', 'description_html-134257');
+    });
+</script>
+      </div>
+    
+      <div class="qu-problem-segment" style="page-break-after: always">
+        
+
+<div style="display: none;" id="description_md-134258">صورت سوال، سوال دو  پی دی اف تمرین است.</div>
+<div>
+    <div class="ui center aligned fluid container">
+        <h1>کلاس گراف جهت‌دار (Class termplate, operator overloading)</h1>
+    </div>
+    <br>
+    <div class="description-html" id="description_html-134258"><p dir="auto">صورت سوال، سوال دو  پی دی اف تمرین است.</p>
+<div class="ui basic modal" id="img-modal">
+            <div class="image content" style="justify-content: center; align-items: center">
+                <img class="image" style="max-width: 100%" src="https://quera.org/course/assignments/39880/print">
+            </div>
+        </div></div>
+</div>
+
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+        render_problem_text('description_md-134258', 'description_html-134258');
+    });
+</script>
+      </div>
+    
+      <div class="qu-problem-segment" style="page-break-after: always">
+        
+
+<div style="display: none;" id="description_md-134260">در این مسئله میخواهیم یک کلاس تعریف کنیم که می‌تواند اعداد صحیح خیلی بزرگ (اعدادی که طول آن ها بیش از حداکثر تعریف شده در cpp باشد.) را در خود نگهداری
+کند.
+
+برای ذخیره سازی این نوع داده می‌توانید ارقام را در یک بردار نگهداری کنید. (هر رقم در یک خانه ی آن بردار(همان وکتور))
+برای این کلاس دو سازنده تعریف کنید
+یکی یک عدد صحیح می‌گیرد و دیگری رشته ای که ارقام در آن ذخیره شده اند. 
+
+این کلاس باید دارای متد های زیر باشد:
++ یک سازنده با ورودی از نوع عدد صحیح
++ یک سازنده با ورودی از نوع رشته
+
+عملگرهای زیر را برای این کلاس تعریف کنید:
++ (امتیازی) عملگر های `+` و `+=` را برای این کلاس تعریف کنید.
++  عملگر های `==` ، `&gt;` را برای مقایسه دو کلاس تعریف کنید.
++ (امتیازی) `&lt;` و همچنین `کوچکترمساوی` را برای مقایسه دو کلاس تعریف کنید.
++ (امتیازی) عملگر `&gt;&gt;` برای ورودی گرفتن.
++ عملگر `&lt;&lt;` برای چاپ کردن این عدد.
+
+**موارد مهم:**
++ توجه داشته باشید کلاس شما باید بتواند با ابجکت های از نوع const هم کار کند.
++ به مثبت یا منفی بودن عدد ورودی توجه شود.
++ هر متد دیگری که این کلاس می‌تواند نیاز داشته باشد را اضافه کنید. (برای مثلا ستر و گتر، سازنده کپی و...)
++ توجه داشته باشید رعایت اصول شئ‌گرایی و encapsulation الزامی است.
++ طراحی کلاس های شما باید در چند فایل در صورت نیاز باشد.</div>
+<div>
+    <div class="ui center aligned fluid container">
+        <h1>کلاس عدد بزرگ (operator overloading)</h1>
+    </div>
+    <br>
+    <div class="description-html" id="description_html-134260"><p dir="auto">در این مسئله میخواهیم یک کلاس تعریف کنیم که می‌تواند اعداد صحیح خیلی بزرگ (اعدادی که طول آن ها بیش از حداکثر تعریف شده در cpp باشد.) را در خود نگهداری
+کند.</p>
+<p dir="auto">برای ذخیره سازی این نوع داده می‌توانید ارقام را در یک بردار نگهداری کنید. (هر رقم در یک خانه ی آن بردار(همان وکتور))
+برای این کلاس دو سازنده تعریف کنید
+یکی یک عدد صحیح می‌گیرد و دیگری رشته ای که ارقام در آن ذخیره شده اند.</p>
+<p dir="auto">این کلاس باید دارای متد های زیر باشد:</p>
+<ul dir="auto">
+<li>یک سازنده با ورودی از نوع عدد صحیح</li>
+<li>یک سازنده با ورودی از نوع رشته</li>
+</ul>
+<p dir="auto">عملگرهای زیر را برای این کلاس تعریف کنید:</p>
+<ul dir="auto">
+<li>(امتیازی) عملگر های <code dir="ltr">+</code> و <code dir="ltr">+=</code> را برای این کلاس تعریف کنید.</li>
+<li>عملگر های <code dir="ltr">==</code> ، <code dir="ltr">&gt;</code> را برای مقایسه دو کلاس تعریف کنید.</li>
+<li>(امتیازی) <code dir="ltr">&lt;</code> و همچنین <code dir="ltr">کوچکترمساوی</code> را برای مقایسه دو کلاس تعریف کنید.</li>
+<li>(امتیازی) عملگر <code dir="ltr">&gt;&gt;</code> برای ورودی گرفتن.</li>
+<li>عملگر <code dir="ltr">&lt;&lt;</code> برای چاپ کردن این عدد.</li>
+</ul>
+<p dir="auto"><strong>موارد مهم:</strong></p>
+<ul dir="auto">
+<li>توجه داشته باشید کلاس شما باید بتواند با ابجکت های از نوع const هم کار کند.</li>
+<li>به مثبت یا منفی بودن عدد ورودی توجه شود.</li>
+<li>هر متد دیگری که این کلاس می‌تواند نیاز داشته باشد را اضافه کنید. (برای مثلا ستر و گتر، سازنده کپی و...)</li>
+<li>توجه داشته باشید رعایت اصول شئ‌گرایی و encapsulation الزامی است.</li>
+<li>طراحی کلاس های شما باید در چند فایل در صورت نیاز باشد.</li>
+</ul>
+<div class="ui basic modal" id="img-modal">
+            <div class="image content" style="justify-content: center; align-items: center">
+                <img class="image" style="max-width: 100%" src="https://quera.org/course/assignments/39880/print">
+            </div>
+        </div></div>
+</div>
+
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+        render_problem_text('description_md-134260', 'description_html-134260');
+    });
+</script>
+      </div>
+    
+    
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          // open all <details> tags
+          $('details').attr('open', '');
+          // print!
+          window.print();
+        });
+      </script>
+    
+  
+<div style="display: none; visibility: hidden;"><script>!function(c,a,b){c.yektanetAnalyticsObject=b;c[b]=c[b]||function(){c[b].q.push(arguments)};c[b].q=c[b].q||[];var d=new Date;d=d.getFullYear().toString()+"0"+d.getMonth()+"0"+d.getDate()+"0"+d.getHours();var e=a.getElementsByTagName("script")[0];a=a.createElement("script");a.id="ua-script-yn-3147-adv";a.dataset.analyticsobject=b;a.async=1;a.type="text/javascript";a.src="https://cdn.yektanet.com/rg_woebegone/scripts_v2/yn-3147-adv/rg.complete.js?v\x3d"+d;e.parentNode.insertBefore(a,e)}(window,document,
+"yektanet");</script></div><script type="text/javascript" id="" src="./OOP_advanced_concepts_files/retargeting.js"></script><script type="text/javascript" id="">(function(a,e,b,f,g,c,d){a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)};c=e.createElement(f);c.async=1;c.src="https://www.clarity.ms/tag/"+g+"?ref\x3dgtm2";d=e.getElementsByTagName(f)[0];d.parentNode.insertBefore(c,d)})(window,document,"clarity","script","at7xzpaerh");</script><iframe src="./OOP_advanced_concepts_files/fingerprint.html" style="display: none;"></iframe><iframe id="_hjSafeContext_70129302" title="_hjSafeContext" tabindex="-1" aria-hidden="true" src="./OOP_advanced_concepts_files/saved_resource.html" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe></body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+  div.grammarly-desktop-integration {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select:none;
+    user-select:none;
+  }
+
+  div.grammarly-desktop-integration:before {
+    content: attr(data-content);
+  }
+</style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>
