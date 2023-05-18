@@ -56,7 +56,7 @@ Course Project: [here](Projects)
 
 ### My Colleague:
 
-During these experience I had te honor to work with the following people:
+During these experiences I had te honor to work with the following people:
 
 - Ahmadreza Hadi: [Github](https://github.com/AhmadrezaHadi), [LinkedIn](https://www.linkedin.com/in/ahmadreza-hadi)
 - Mehrasa Amiri: [Github](https://github.com/mobiusss3)
