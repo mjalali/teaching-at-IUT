@@ -1,3 +1,7 @@
+# Advanced Programming
+
+### English
+
 Here is my Persian Advanced Programming Home works categorized by the following subjects
 
 1. Basic topics: main argument, functional programming, debugging, git, [HTML](basic_topics.html), [PDF](basic_topics.pdf)
@@ -18,9 +22,7 @@ Course Project: [here](Projects)
 
 ---
 
-
-
-Persian:
+### Persian:
 
 <div dir="rtl">
 بانک سوالات به دسته های زیر تقسیم میشود:
@@ -49,3 +51,16 @@ Persian:
 پروژه‌ی درس:
 [here](Projects)
 </div>
+
+---
+
+### My Colleague:
+
+During these experience I had te honor to work with the following people:
+
+- Ahmadreza Hadi: [Github](https://github.com/AhmadrezaHadi), [LinkedIn](https://www.linkedin.com/in/ahmadreza-hadi)
+- Mehrasa Amiri: [Github](https://github.com/mobiusss3)
+- Majid Farhadi: [LinkedIn](https://www.linkedin.com/in/majid-farhadi-b0a04a227)
+- Sana Mehrabbeigi: [Github](https://github.com/sanamehrabbeigi), [LinkedIn](https://www.linkedin.com/in/sanamehrabbeigi)
+- Sepehr Shirani: [Github](https://github.com/Sepovsky), [LinkedIn](https://www.linkedin.com/in/sepehr-shirani-b8a5871b6)
+- Ali Khabazian: [LinkedIn](https://www.linkedin.com/in/ali-khabazian-37963318a)
